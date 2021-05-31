@@ -6,13 +6,13 @@
 /*   By: gariadno <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 20:08:30 by gariadno          #+#    #+#             */
-/*   Updated: 2020/01/29 14:02:51 by gariadno         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:09:25 by gariadno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*f_pointer(char const *s, char c)
+char	*f_pointer(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	len;
@@ -32,7 +32,7 @@ char			*f_pointer(char const *s, char c)
 	return (str);
 }
 
-char			*f_findword(char const *s, char c, unsigned int word)
+char	*f_findword(char const *s, char c, unsigned int word)
 {
 	unsigned int	words;
 	int				trigger;
@@ -76,16 +76,21 @@ unsigned int	f_countw(char const *s, char c)
 	return (words);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	unsigned int	i;
 	char			**str;
+	unsigned int	words;
 
-	if (!s || !(str = (char **)malloc((f_countw(s, c) + 1) * sizeof(char *))))
+	if (!s)
 		return (NULL);
-	str[f_countw(s, c)] = NULL;
+	words = f_countw(s, c);
+	str = (char **)malloc((words + 1) * sizeof(char *));
+	if (!str)
+		return (NULL);
+	str[words] = NULL;
 	i = 0;
-	while (i < f_countw(s, c))
+	while (i < words)
 	{
 		str[i] = f_findword(s, c, i + 1);
 		i++;
