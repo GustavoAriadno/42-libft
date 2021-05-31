@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gariadno <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gariadno <gariadno@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 11:44:57 by gariadno          #+#    #+#             */
-/*   Updated: 2020/02/08 16:00:35 by gariadno         ###   ########.fr       */
+/*   Updated: 2021/05/19 21:46:54 by gariadno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*str;
+	char	*str;
+	size_t	len1;
+	size_t	len2;
 
-	if (!s1 || !(str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+	if (!s1)
 		return (NULL);
-	ft_memcpy(str, s1, ft_strlen(s1));
-	ft_memcpy(str + ft_strlen(s1), s2, ft_strlen(s2));
-	str[ft_strlen(s2) + ft_strlen(s1)] = '\0';
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	str = (char *)malloc(len1 + len2 + 1);
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s1, len1);
+	ft_memcpy(str + len1, s2, len2);
+	str[len1 + len2] = '\0';
 	return (str);
 }

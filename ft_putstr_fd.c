@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gariadno <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gariadno <gariadno@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:16:51 by gariadno          #+#    #+#             */
-/*   Updated: 2020/01/27 10:43:40 by gariadno         ###   ########.fr       */
+/*   Updated: 2021/05/19 21:42:20 by gariadno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int len;
+	int	len;
 
 	if (s == NULL)
 		return ;

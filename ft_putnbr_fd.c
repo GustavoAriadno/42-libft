@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gariadno <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gariadno <gariadno@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 14:38:05 by gariadno          #+#    #+#             */
-/*   Updated: 2020/02/01 19:26:16 by gariadno         ###   ########.fr       */
+/*   Updated: 2021/05/19 21:42:11 by gariadno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int x;
+	unsigned int	x;
 
 	if (n < 0)
 	{

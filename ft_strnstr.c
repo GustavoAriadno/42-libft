@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strnstr.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gariadno <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gariadno <gariadno@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 19:40:50 by gariadno          #+#    #+#             */
-/*   Updated: 2020/01/31 10:43:09 by gariadno         ###   ########.fr       */
+/*   Updated: 2021/05/19 21:40:57 by gariadno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (haystack[i] != '\0' && i != len)
 	{
 		j = 0;
-		while (haystack[i + j] == needle[j] &&
-				needle[j] != '\0' && (i + j) != len)
+		while (haystack[i + j] == needle[j]
+			&& needle[j] != '\0' && (i + j) != len)
 			j++;
 		if (needle[j] == '\0')
 			return ((char *)&haystack[i]);
