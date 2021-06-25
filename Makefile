@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gariadno <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: gariadno <gariadno@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/01 19:36:49 by gariadno          #+#    #+#              #
-#    Updated: 2020/02/01 19:38:28 by gariadno         ###   ########.fr        #
+#    Updated: 2021/06/25 08:47:25 by gariadno         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,17 +20,17 @@ FILES = ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 		ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-		ft_putnbr_fd.c ft_lstiter.c ft_lstmap.c
+		ft_putnbr_fd.c ft_isspace.c ft_atol.c
 
 FILES_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
-			ft_lstlast.c ft_lstadd_back.c ft_lstadd_back.c \
-			ft_lstdelone.c ft_lstclear.c
+			ft_lstlast.c ft_lstdelone.c ft_lstadd_back.c \
+			ft_lstclear.c ft_lstmap.c ft_lstiter.c
 
 OBJECTS = $(FILES:.c=.o)
 
 OBJECTS_BONUS = $(FILES_BONUS:.c=.o)
 
-CC = gcc -c -Wall -Werror -Wextra
+CC = clang -c -Wall -Werror -Wextra
 
 HEADERS = libft.h
 
