@@ -6,7 +6,7 @@
 /*   By: gariadno <gariadno@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:13:21 by gariadno          #+#    #+#             */
-/*   Updated: 2021/06/25 08:47:47 by gariadno         ###   ########.fr       */
+/*   Updated: 2021/08/18 22:12:32 by gariadno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,17 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
+
+# define BUFFER_SIZE 42
+# define OPEN_MAX 256
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -69,5 +74,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+int					get_next_line(int fd, char **line);
+
 
 #endif
