@@ -6,7 +6,7 @@
 /*   By: gariadno <gariadno@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:13:21 by gariadno          #+#    #+#             */
-/*   Updated: 2021/08/18 22:12:32 by gariadno         ###   ########.fr       */
+/*   Updated: 2021/08/22 17:41:33 by gariadno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 int					get_next_line(int fd, char **line);
+char				*ft_ftoa(long double n, size_t len);
 
 
 #endif
