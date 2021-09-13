@@ -6,7 +6,7 @@
 /*   By: gariadno <gariadno@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:13:21 by gariadno          #+#    #+#             */
-/*   Updated: 2021/08/22 17:41:33 by gariadno         ###   ########.fr       */
+/*   Updated: 2021/09/13 20:47:44 by gariadno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 int					get_next_line(int fd, char **line);
 char				*ft_ftoa(long double n, size_t len);
-
+int					ft_strisnum(char *num);
 
 #endif

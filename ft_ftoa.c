@@ -19,10 +19,13 @@ static long double	ft_round(long double n)
 
 static char	*ft_left(char *str, size_t len, unsigned long right, long double n)
 {
-	char *tmp = NULL;
-	char *r = NULL;
-	char *i = NULL;
+	char	*tmp;
+	char	*r;
+	char	*i;
 
+	tmp = NULL;
+	r = NULL;
+	i = NULL;
 	r = ft_strjoin(str, ".");
 	free(str);
 	while (len--)
